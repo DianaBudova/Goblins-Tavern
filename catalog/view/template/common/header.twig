@@ -47,26 +47,9 @@
     <div class="nav float-end">
       <ul class="list-inline">
         <li class="list-inline-item"><a href="{{ contact }}"><i class="fa-solid fa-phone"></i></a> <span class="d-none d-md-inline">{{ telephone }}</span></li>
-        <li class="list-inline-item">
-          <div class="dropdown">
-            <a href="{{ account }}" class="dropdown-toggle" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i> <span class="d-none d-md-inline">{{ text_account }}</span> <i class="fa-solid fa-caret-down"></i></a>
-            <ul class="dropdown-menu dropdown-menu-right">
-              {% if not logged %}
-                <li><a href="{{ register }}" class="dropdown-item">{{ text_register }}</a></li>
-                <li><a href="{{ login }}" class="dropdown-item">{{ text_login }}</a></li>
-              {% else %}
-                <li><a href="{{ account }}" class="dropdown-item">{{ text_account }}</a></li>
-                <li><a href="{{ order }}" class="dropdown-item">{{ text_order }}</a></li>
-                <li><a href="{{ transaction }}" class="dropdown-item">{{ text_transaction }}</a></li>
-                <li><a href="{{ download }}" class="dropdown-item">{{ text_download }}</a></li>
-                <li><a href="{{ logout }}" class="dropdown-item">{{ text_logout }}</a></li>
-              {% endif %}
-            </ul>
-          </div>
-        </li>
-        <li class="list-inline-item"><a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><i class="fa-solid fa-heart"></i> <span class="d-none d-md-inline">{{ text_wishlist }}</span></a></li>
-        <li class="list-inline-item"><a href="{{ shopping_cart }}" title="{{ text_shopping_cart }}"><i class="fa-solid fa-cart-shopping"></i> <span class="d-none d-md-inline">{{ text_shopping_cart }}</span></a></li>
-        <li class="list-inline-item"><a href="{{ checkout }}" title="{{ text_checkout }}"><i class="fa-solid fa-share"></i> <span class="d-none d-md-inline">{{ text_checkout }}</span></a></li>
+        <li class="list-inline-item"><a href="{{ wishlist }}" id="wishlist-total"><i class="fa-solid fa-heart"></i> <span class="d-none d-md-inline">{{ text_wishlist }}</span></a></li>
+        <li class="list-inline-item"><a href="{{ shopping_cart }}"><i class="fa-solid fa-cart-shopping"></i> <span class="d-none d-md-inline">{{ text_shopping_cart }}</span></a></li>
+        <li class="list-inline-item"><a href="{{ checkout }}"><i class="fa-solid fa-share"></i> <span class="d-none d-md-inline">{{ text_checkout }}</span></a></li>
       </ul>
     </div>
   </div>
@@ -77,7 +60,7 @@
       <div class="col-md-3 col-lg-4">
         <div id="logo">
           {% if logo %}
-            <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-fluid"/></a>
+            <a href="{{ home }}"><img src="{{ logo }}" alt="{{ name }}" class="img-fluid"/></a>
           {% else %}
             <h1><a href="{{ home }}">{{ name }}</a></h1>
           {% endif %}
