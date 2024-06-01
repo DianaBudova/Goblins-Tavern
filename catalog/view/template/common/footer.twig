@@ -3,6 +3,12 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
+        <h5>{{ text_details }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ contact }}">{{ telephone }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
         <h5>{{ text_information }}</h5>
         <ul class="list-unstyled">
           {% for information in informations %}

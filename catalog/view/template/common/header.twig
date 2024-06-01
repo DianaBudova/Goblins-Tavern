@@ -36,28 +36,10 @@
 </head>
 <body>
 <div id="alert" class="toast-container position-fixed top-0 end-0 p-3"></div>
-<nav id="top">
-  <div class="container">
-    <div class="nav float-start">
-      <ul class="list-inline">
-        <li class="list-inline-item">{{ currency }}</li>
-        <li class="list-inline-item cursor-pointer">{{ language }}</li>
-      </ul>
-    </div>
-    <div class="nav float-end">
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="{{ contact }}"><i class="fa-solid fa-phone"></i></a> <span class="d-none d-md-inline">{{ telephone }}</span></li>
-        <li class="list-inline-item"><a href="{{ wishlist }}" id="wishlist-total"><i class="fa-solid fa-heart"></i> <span class="d-none d-md-inline">{{ text_wishlist }}</span></a></li>
-        <li class="list-inline-item"><a href="{{ shopping_cart }}"><i class="fa-solid fa-cart-shopping"></i> <span class="d-none d-md-inline">{{ text_shopping_cart }}</span></a></li>
-        <li class="list-inline-item"><a href="{{ checkout }}"><i class="fa-solid fa-share"></i> <span class="d-none d-md-inline">{{ text_checkout }}</span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 <header>
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-3 col-lg-4">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md-1 col-lg-3">
         <div id="logo">
           {% if logo %}
             <a href="{{ home }}"><img src="{{ logo }}" alt="{{ name }}" class="img-fluid"/></a>
@@ -66,8 +48,15 @@
           {% endif %}
         </div>
       </div>
-      <div class="col-md-5">{{ search }}</div>
-      <div id="header-cart" class="col-md-4 col-lg-3">{{ cart }}</div>
+      <div class="col-md-9">
+        <div class="d-flex justify-content-end align-items-center">
+          <div class="col-md-5 px-2">{{ search }}</div>
+          <div id="header-cart" class="col-md-1 col-lg-1 px-2">{{ account }}</div>
+          <div id="header-cart" class="col-md-1 col-lg-1 px-2">{{ cart }}</div>
+          <div id="header-cart" class="col-md-1 col-lg-1 px-2">{{ currency }}</div>
+          <div id="header-cart" class="col-md-1 col-lg-1 px-2">{{ language }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </header>

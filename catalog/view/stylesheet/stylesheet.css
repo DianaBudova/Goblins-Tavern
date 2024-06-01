@@ -41,6 +41,19 @@ a {
 a:hover {
   text-decoration: none;
 }
+.nav-link {
+  color: #7d5b80;
+}
+.nav-link:hover, .nav-link:focus {
+  color: #7d5b80;
+}
+.list-group-item:hover {
+  background-color: #dfdfdf;
+  transition: 0.3s;
+}
+/*.col-md-4 {*/
+/*  width: 8.33333333%;*/
+/*}*/
 /* Chrome border line */
 button:focus {
   outline: none !important;
@@ -218,6 +231,7 @@ footer a {
 /* cart */
 #header-cart {
   margin-bottom: 10px;
+  box-sizing: unset;
 }
 #header-cart .btn-lg {
   color: #FFF;
@@ -306,7 +320,7 @@ footer a {
   border-color: #fff;
   font-size: 0.9em;
 }
-#menu .navbar-nav > li > a {
+#menu .navbar-nav > li > a, #menu .navbar-nav > li > form > a {
   color: #fff;
   padding: 10px 15px 10px 15px;
   min-height: 15px;
@@ -316,9 +330,9 @@ footer a {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 768px) {
-  #menu .dropdown:hover .dropdown-menu {
-    display: block;
-  }
+  /*#menu .dropdown:hover .dropdown-menu {*/
+  /*  display: block;*/
+  /*}*/
 }
 @media (max-width: 767px) {
   #menu {
@@ -660,14 +674,4 @@ footer h5 {
 #cookie div {
   font-size: 16px;
   color: #FFFFFF;
-}
-.nav-link {
-  color: #7d5b80;
-}
-.nav-link:hover, .nav-link:focus {
-  color: #7d5b80;
-}
-.list-group-item:hover {
-  background-color: #dfdfdf;
-  transition: 0.3s;
 }

@@ -55,28 +55,16 @@ class Header extends \Opencart\System\Engine\Controller {
 
 		$this->load->language('common/header');
 
-		// Wishlist
-		if ($this->customer->isLogged()) {
-			$this->load->model('account/wishlist');
-
-			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
-		} else {
-			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
-		}
-
 		$data['home'] = $this->url->link('common/home', 'language=' . $this->config->get('config_language'));
-		$data['wishlist'] = $this->url->link('account/wishlist', 'language=' . $this->config->get('config_language') . (isset($this->session->data['customer_token']) ? '&customer_token=' . $this->session->data['customer_token'] : ''));
 
-		$data['shopping_cart'] = $this->url->link('checkout/cart', 'language=' . $this->config->get('config_language'));
-		$data['checkout'] = $this->url->link('checkout/checkout', 'language=' . $this->config->get('config_language'));
-		$data['contact'] = $this->url->link('information/contact', 'language=' . $this->config->get('config_language'));
-		$data['telephone'] = $this->config->get('config_telephone');
-
-		$data['language'] = $this->load->controller('common/language');
-		$data['currency'] = $this->load->controller('common/currency');
 		$data['search'] = $this->load->controller('common/search');
+        $data['account'] = $this->load->controller('common/account');
 		$data['cart'] = $this->load->controller('common/cart');
-		$data['menu'] = $this->load->controller('common/menu');
+        $data['language'] = $this->load->controller('common/language');
+        $data['currency'] = $this->load->controller('common/currency');
+
+        $data['menu'] = $this->load->controller('common/menu');
+
 		return $this->load->view('common/header', $data);
 	}
 }
