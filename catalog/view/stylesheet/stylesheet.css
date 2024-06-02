@@ -3,7 +3,7 @@
   src: url("./fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
 }
 body {
-  background-color: #e0d7e0;
+  background-color: #f8f8f8;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #666;
@@ -211,11 +211,13 @@ footer a {
 }
 /* search */
 #search {
-  margin-bottom: 5px;
   -webkit-box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.75);
   border-radius: 5px;
+}
+#search .form-control-lg:focus {
+  box-shadow: 0 0 0 0.25rem #7a7a7a;
 }
 #search .form-control-lg {
   height: 40px;
@@ -249,7 +251,6 @@ header {
     display: flex;
   }
 }
-
 @media (min-width: 768px) {
   .header-container .pc-layout {
     justify-content: end;
@@ -261,8 +262,16 @@ header {
   }
 }
 #header-cart, #header-account, #header-currency, #header-language {
-  margin-bottom: 5px;
   box-sizing: unset;
+}
+#header-cart i, #header-account i {
+  font-size: 20px;
+}
+#header-currency strong {
+  font-size: 22px;
+}
+#header-language img {
+  width: 22px;
 }
 #header-cart .btn-lg, #header-account .btn-lg, #header-currency .btn-lg, #header-language .btn-lg {
   color: #FFF;
@@ -284,6 +293,12 @@ header {
   min-width: 427px;
 }
 @media (max-width: 768px) {
+  #search {
+    margin-bottom: 10px;
+  }
+  #header-cart, #header-account, #header-currency, #header-language {
+    margin-bottom: 10px;
+  }
   #header-cart .dropdown-menu li, #header-account .dropdown-menu li, #header-currency .dropdown-menu li, #header-language .dropdown-menu li {
     min-width: 100%;
   }
@@ -300,7 +315,6 @@ header {
 #menu.navbar {
   padding: 0 1rem;
   margin-bottom: 20px;
-
 }
 #menu .dropdown-menu {
   padding-bottom: 0;
@@ -361,11 +375,6 @@ header {
 #menu .navbar-nav > li > a:hover {
   background-color: rgba(0, 0, 0, 0.1);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-}
-@media (min-width: 768px) {
-  /*#menu .dropdown:hover .dropdown-menu {*/
-  /*  display: block;*/
-  /*}*/
 }
 @media (max-width: 767px) {
   #menu {
@@ -557,7 +566,6 @@ footer h5 {
 .btn-inverse {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  /*background-color: #444444;*/
   border: 0;
 }
 .btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled] {
