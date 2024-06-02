@@ -51,9 +51,12 @@ a:hover {
   background-color: #dfdfdf;
   transition: 0.3s;
 }
-/*.col-md-4 {*/
-/*  width: 8.33333333%;*/
-/*}*/
+.pr-2 {
+  padding-right: 0.5rem !important;
+}
+.pl-2 {
+  padding-left: 0.5rem !important;
+}
 /* Chrome border line */
 button:focus {
   outline: none !important;
@@ -201,7 +204,7 @@ footer a {
 }
 /* logo */
 #logo {
-  margin: 0 0 10px 0;
+  margin: 10px 0;
 }
 #logo img {
   max-width: 200px;
@@ -228,29 +231,57 @@ footer a {
   text-shadow: 0 1px 0 #FFF;
   border: 0;
 }
-/* cart */
-#header-cart {
+/* header */
+.header-container .pc-layout {
+  display: flex;
+}
+.header-container .mobile-layout {
+  display: none;
+}
+@media (max-width: 576px) {
+  .header-container .pc-layout {
+    display: none;
+  }
+  .header-container .mobile-layout {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-container .pc-layout {
+    justify-content: end;
+  }
+}
+@media (max-width: 767.98px) {
+  .header-container .pc-layout {
+    justify-content: space-between !important;
+  }
+}
+#header-cart, #header-account, #header-currency, #header-language {
   margin-bottom: 10px;
   box-sizing: unset;
 }
-#header-cart .btn-lg {
+#header-cart .btn-lg, #header-account .btn-lg, #header-currency .btn-lg, #header-language .btn-lg {
   color: #FFF;
   height: 40px;
   padding: 0 1rem;
+  background-color: #444444;
   box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.75);
 }
-#header-cart .btn:hover {
+#header-cart .btn:hover, #header-account .btn:hover, #header-currency .btn:hover, #header-language .btn:hover {
   color: #FFF;
-  background-color: #222222;
 }
-#header-cart .dropdown-menu {
+#header-cart .btn-lg:active, #header-account .btn:active, #header-currency .btn:active, #header-language .btn:active {
+  background-color: #1b1b1b;
+}
+#header-cart .dropdown-menu, #header-account .dropdown-menu, #header-currency .dropdown-menu, #header-language .dropdown-menu {
   background: #eee;
 }
-#header-cart .dropdown-menu li {
+#header-cart .dropdown-menu li, #header-account .dropdown-menu li, #header-currency .dropdown-menu li, #header-language .dropdown-menu li {
   min-width: 427px;
 }
 @media (max-width: 768px) {
-  #header-cart .dropdown-menu li {
+  #header-cart .dropdown-menu li, #header-account .dropdown-menu li, #header-currency .dropdown-menu li, #header-language .dropdown-menu li {
     min-width: 100%;
   }
 }
