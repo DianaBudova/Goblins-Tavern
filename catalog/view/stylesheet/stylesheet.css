@@ -211,9 +211,6 @@ footer a {
 }
 /* search */
 #search {
-  -webkit-box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.75);
   border-radius: 5px;
 }
 #search .form-control-lg:focus {
@@ -281,7 +278,6 @@ header {
 }
 #header-cart .btn-lg:hover, #header-account .btn-lg:hover, #header-currency .btn-lg:hover, #header-language .btn-lg:hover {
   background-color: #444444;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 #header-cart .btn:hover, #header-account .btn:hover, #header-currency .btn:hover, #header-language .btn:hover {
   color: #FFF;
