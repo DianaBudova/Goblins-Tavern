@@ -33,6 +33,18 @@
   {% for analytic in analytics %}
     {{ analytic }}
   {% endfor %}
+  <style>
+      body.dark-theme {
+          background-color: #121212;
+          color: #ffffff;
+      }
+      .theme-switcher {
+          position: fixed;
+          top: 1rem;
+          right: 1rem;
+          cursor: pointer;
+      }
+  </style>
 </head>
 <body>
 <div id="alert" class="toast-container position-fixed top-0 end-0 p-3"></div>
@@ -54,6 +66,7 @@
           <div id="header-account" class="col-md-1 col-lg-1 px-2">{{ account }}</div>
           <div id="header-cart" class="col-md-1 col-lg-1 px-2">{{ cart }}</div>
           <div id="header-currency" class="col-md-1 col-lg-1 px-2">{{ currency }}</div>
+          <div id="header-theme" class="col-md-1 col-lg-1 px-2">{{ theme }}</div>
           <div id="header-language" class="col-md-1 col-lg-1 pl-2">{{ language }}</div>
         </div>
         <div class="flex-column align-items-end mobile-layout">
@@ -62,6 +75,7 @@
             <div id="header-account" class="flex-fill pr-2">{{ account }}</div>
             <div id="header-cart" class="flex-fill px-2">{{ cart }}</div>
             <div id="header-currency" class="flex-fill px-2">{{ currency }}</div>
+            <div id="header-theme" class="flex-fill pl-2">{{ theme }}</div>
             <div id="header-language" class="flex-fill pl-2">{{ language }}</div>
           </div>
         </div>

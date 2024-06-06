@@ -62,6 +62,7 @@ class Header extends \Opencart\System\Engine\Controller {
 		$data['cart'] = $this->load->controller('common/cart');
         $data['language'] = $this->load->controller('common/language');
         $data['currency'] = $this->load->controller('common/currency');
+        $data['theme'] = $this->load->controller('common/theme');
 
         $data['menu'] = $this->load->controller('common/menu');
 
